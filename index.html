@@ -14,6 +14,18 @@
   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
   crossorigin=""></script>
   <link rel="stylesheet" href="./assets/css/style.css">
+    ALGOLIA_SEARCH_API_KEY
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
+<script type="text/javascript">
+  algoliasearchNetlify({
+    appId: process.env.APP_ID,
+    apiKey: process.env.ALGOLIA_SEARCH_API_KEY,
+    siteId: process.env.A_SITE_ID,
+    branch: 'main',
+    selector: 'div#search',
+  });
+</script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -34,6 +46,7 @@
                 <a class="nav-link active" aria-current="page" href="/contact.html">Contact Us</a>
               </li>
             </ul>
+              <div id="search"></div>
           </div>
         </div>
       </nav>
